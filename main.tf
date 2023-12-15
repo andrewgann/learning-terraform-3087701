@@ -14,15 +14,7 @@ data "aws_ami" "app_ami" {
   owners = ["979382823631"] # Bitnami
 }
 
-<<<<<<< HEAD
-data "aws_vpc" "default" {
-  default = true
-}
-
-resource "aws_instance" "web" {
-=======
 resource "aws_instance" "blog" {
->>>>>>> de1ba2ccbe9a5c66c963854629d6a9bc87bf5bd5
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
 
